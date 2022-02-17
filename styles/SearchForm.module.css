@@ -1,0 +1,70 @@
+#lb_keywords {
+  grid-area: a;
+}
+#in_keywords {
+  grid-area: b;
+}
+#lb_location {
+  grid-area: c;
+}
+#in_location {
+  grid-area: d;
+}
+
+.title {
+  font-size: 0.8rem;
+  padding: 10px;
+  width: 60%;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: var(--linkedin-color);
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  height: calc(100vh - 143px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.form {
+  width: 60%;
+  padding: 30px;
+  background-color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: grid;
+  grid-template-areas: "a b"
+                       "c d"
+                       "e e";
+  gap: 1rem;
+}
+
+.label {
+  align-self: center;
+}
+
+.text_input {
+  min-height: 35px;
+  min-width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.text-input:focus {
+  border: 1px solid var(--infojobs-color)
+}
+
+.button {
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--infojobs-color);
+  color: white;
+  grid-area: e;
+  padding: 10px;
+}
