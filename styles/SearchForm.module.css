@@ -12,14 +12,15 @@
 }
 
 .title {
+  grid-area: a;
   font-size: 0.8rem;
   padding: 10px;
-  width: 60%;
+  width: 100%;
   color: white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   background-color: var(--linkedin-color);
   text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .container {
@@ -34,14 +35,19 @@
 
 .form {
   width: 60%;
-  padding: 30px;
   background-color: white;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 15px -5px #000000;
+  box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.inner_form {
+  padding: 30px;
   display: grid;
-  grid-template-areas: "a b"
-                       "c d"
-                       "e e";
+  grid-template-areas:
+    "a b"
+    "c d"
+    "e e";
   gap: 1rem;
 }
 
@@ -50,21 +56,38 @@
 }
 
 .text_input {
+  padding: 0.5rem;
   min-height: 35px;
   min-width: 300px;
   border: 1px solid black;
   border-radius: 5px;
 }
 .text-input:focus {
-  border: 1px solid var(--infojobs-color)
+  outline: var(--infojobs-color);
 }
 
 .button {
+  grid-area: e;
+  transition-duration: 200ms;
   font-weight: 600;
   border: none;
   border-radius: 5px;
-  background-color: var(--infojobs-color);
+  background-color: var(--linkedin-color);
   color: white;
-  grid-area: e;
   padding: 10px;
+}
+
+.button:hover {
+  transition-duration: 200ms;
+  background-color: var(--infojobs-color);
+  -webkit-box-shadow: 0px 0px 15px -5px #000000;
+  box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.button:focus {
+  outline: none;
+  transition-duration: 200ms;
+  background-color: var(--infojobs-color);
+  -webkit-box-shadow: 0px 0px 15px -5px #000000;
+  box-shadow: 0px 0px 15px -5px #000000;
 }
